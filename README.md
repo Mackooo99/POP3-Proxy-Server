@@ -25,6 +25,9 @@ make proxy
 ./client
 ```
 
+### 3. Start the POP3 Server (BabyPOP3Server)
+The POP3 server used for testing was started on a separate computer. Ensure that the proxy is configured to connect to the correct server address.
+
 ## Configuration
 - The proxy listens for incoming connections on a predefined TCP port.
 - Forwarding is done to the POP3 server running on port **110**.
@@ -37,4 +40,4 @@ This open-source project is available under the [MIT License](LICENSE).
 Pull requests are welcome! If you happen to have any issues, please feel free to open an [issue](https://github.com/yourusername/POP3-Proxy-Server/issues).
 
 ## Contact
-For questions or suggestions, contact [marijanink@gmail.com](mailto:marijanink@gmail.com).
+For questions or suggestions, contact [mail](mailto:marijanink@gmail.com).
