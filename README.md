@@ -9,3 +9,19 @@ Features:
     Supports user blocking based on the email address provided in the USER command
 
     Tested with an email client and a POP3 server
+    
+    
+    
+Build and run
+	
+Client:
+	make client_clean
+	make client
+	
+Proxy:
+	make proxy_clean
+	make proxy
+	
+RUN:
+	./client
+	./proxy
