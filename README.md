@@ -1,27 +1,40 @@
 # POP3-Proxy-Server
 
-POP3 Proxy Server is an application that intermediates communication between an email client and an email server. It listens for connection requests on a predefined TCP port and forwards them to the POP3 server on port 110. Each communication direction is handled in a separate thread.
+## Overview
+POP3 Proxy Server is a multi-threaded application that intermediates communication between an email client and a POP3 server. It listens for connection requests on a predefined TCP port and forwards them to the POP3 server on port 110. The proxy also supports user blocking based on email addresses provided in the `USER` command.
 
-Features:
+## Features
+- 📡 **Transparent forwarding** – Relays requests from the client to the server and responses from the server to the client.
+- 🔒 **User blocking** – Blocks access for specific users based on their email addresses.
+- ⚡ **Multi-threaded processing** – Each connection is handled in a separate thread for efficient performance.
+- ✅ **Tested Compatibility** – Works with standard POP3 clients and servers.
 
-    Forwards requests from the client to the server and responses from the server to the client
+## Installation & Usage
 
-    Supports user blocking based on the email address provided in the USER command
+### 1. Build the Project
+```sh
+make client_clean
+make client
+make proxy_clean
+make proxy
+```
 
-    Tested with an email client and a POP3 server
-    
-    
-    
-Build and run
-	
-Client:
-	make client_clean
-	make client
-	
-Proxy:
-	make proxy_clean
-	make proxy
-	
-RUN:
-	./client
-	./proxy
+### 2. Run the Proxy and Client
+```sh
+./proxy
+./client
+```
+
+## Configuration
+- The proxy listens for incoming connections on a predefined TCP port.
+- Forwarding is done to the POP3 server running on port **110**.
+- User blocking is managed via a list of restricted email addresses.
+
+## License
+This open-source project is available under the [MIT License](LICENSE).
+
+## Contributing
+Pull requests are welcome! If you happen to have any issues, please feel free to open an [issue](https://github.com/yourusername/POP3-Proxy-Server/issues).
+
+## Contact
+For questions or suggestions, contact [marijanink@gmail.com](mailto:marijanink@gmail.com).
